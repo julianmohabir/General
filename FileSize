@@ -1,0 +1,3 @@
+$file = Get-ChildItem -File -Path "\\ogbdpayfs01\Shared\TMF" -recurse
+
+$file | Export-csv -Path c:\setup\log1.csv -NoTypeInformation
