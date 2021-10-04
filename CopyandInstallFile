@@ -1,0 +1,2 @@
+Copy-Item -Path c:\temp\AzInfoProtection_UL.exe -Destination "\\2UA6151HH9\c$\temp\"
+Invoke-Command -ComputerName 2UA6151HH9 -ScriptBlock  {c:\temp\AzInfoProtection_UL.exe /install /quiet} 
