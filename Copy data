@@ -1,0 +1,5 @@
+$names = Get-Content c:\temp\names.txt
+Foreach ($name in $names)
+{
+Copy-Item -Path "\\bny050\users\$name\Data Classification\Round 1" -Destination c:\temp\aip\$name -Recurs
+}
