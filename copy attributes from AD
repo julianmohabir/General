@@ -1,0 +1,6 @@
+#copy attributes from AD
+$users = Get-Content c:\temp\users.txt
+foreach ($user in $users)
+{
+Get-ADUser $user -Properties extensionattribute4 | Select-Object samaccountname, extensionAttribute4 | Export-Csv -path c:\temp\lord.csv -NoTypeInformation -Append
+}
